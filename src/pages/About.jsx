@@ -17,9 +17,19 @@ const About = () => {
                             I’m a UX Researcher with a strong technical and product background.
                             My work sits at the intersection of <span className="text-white font-medium">user psychology</span>, <span className="text-white font-medium">complex workflows</span>, <span className="text-white font-medium">regulated content</span>, and <span className="text-white font-medium">real-world constraints</span>.
                         </p>
-                        <p className="text-lg text-muted leading-relaxed">
+                        <p className="text-lg text-muted leading-relaxed mb-8">
                             I’ve worked in domains where clarity and accuracy matter — healthcare, OTC drug labels, product workflows, and automation systems. This gives me a grounded understanding of how people interact with information under stress, confusion, or low literacy.
                         </p>
+                        <div className="flex justify-start">
+                            <a
+                                href={`${import.meta.env.BASE_URL}assets/resume.pdf`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center px-6 py-3 bg-accent text-primary font-bold rounded-lg hover:bg-accent/90 transition-colors shadow-lg shadow-accent/20"
+                            >
+                                <span className="mr-2">📄</span> Download Résumé
+                            </a>
+                        </div>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-12 mb-16">
