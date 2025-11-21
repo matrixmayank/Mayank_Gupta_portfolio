@@ -22,7 +22,7 @@ git commit -m "Deploying portfolio website"
 # 4. Push to GitHub
 echo "Pushing to GitHub... (You may be asked for your GitHub credentials)"
 git branch -M main
-git push -u origin main
+git push -u origin main --force
 
 # 5. Deploy to GitHub Pages
 echo "Deploying to GitHub Pages..."
