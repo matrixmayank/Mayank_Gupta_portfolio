@@ -23,9 +23,9 @@ const Navbar = () => {
         </Link>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <div className="flex gap-4">
-            <a href="#" className="text-muted hover:text-accent transition-colors"><Github size={20} /></a>
-            <a href="#" className="text-muted hover:text-accent transition-colors"><Linkedin size={20} /></a>
-            <a href="#" className="text-muted hover:text-accent transition-colors"><Mail size={20} /></a>
+            <a href="https://github.com/matrixmayank" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-accent transition-colors"><Github size={20} /></a>
+            <a href="https://www.linkedin.com/in/himayank/" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-accent transition-colors"><Linkedin size={20} /></a>
+            <a href="mailto:mayankgupta.letters@gmail.com" className="text-muted hover:text-accent transition-colors"><Mail size={20} /></a>
           </div>
           <button
             onClick={() => setIsOpen(!isOpen)}

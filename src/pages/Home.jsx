@@ -88,7 +88,7 @@ const Home = () => {
                             <div className="absolute inset-0 bg-accent/20 rounded-full blur-3xl animate-pulse"></div>
                             <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/10 shadow-2xl">
                                 <img
-                                    src="/assets/profile.jpg"
+                                    src={`${import.meta.env.BASE_URL}assets/profile.jpg`}
                                     alt="Mayank Gupta"
                                     className="w-full h-full object-cover object-top"
                                 />
