@@ -12,13 +12,11 @@ const CaseStudy1 = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <Link to="/" className="inline-flex items-center text-muted hover:text-white mb-8 transition-colors">
+                    <Link to="/" className="inline-flex items-center text-muted hover:text-text mb-8 transition-colors">
                         <ArrowLeft size={20} className="mr-2" /> Back to Home
                     </Link>
 
-                    <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                        Accessible Health Monitoring App for Aging Users (60+)
-                    </h1>
+                    <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">Accessible Health Monitoring App for Ageing Users (60+)</h1>
 
                     <div className="grid md:grid-cols-2 gap-8 mb-12">
                         <div className="glass p-6 rounded-xl border-l-4 border-blue-500">
@@ -36,10 +34,10 @@ const CaseStudy1 = () => {
                     </div>
 
                     <div className="mb-12">
-                        <h2 className="text-2xl font-bold mb-4 text-white">Methods Used</h2>
+                        <h2 className="text-2xl font-bold mb-4 text-text">Methods Used</h2>
                         <div className="flex flex-wrap gap-3">
                             {["Contextual inquiry", "Semi-structured interviews", "Heuristic evaluation", "Usability testing (5 tasks)", "Diary study (3 days)"].map((method, i) => (
-                                <span key={i} className="px-4 py-2 bg-secondary rounded-full text-sm text-gray-300 border border-white/5">
+                                <span key={i} className="px-4 py-2 bg-secondary rounded-full text-sm text-muted border border-white/5">
                                     {method}
                                 </span>
                             ))}
@@ -47,7 +45,7 @@ const CaseStudy1 = () => {
                     </div>
 
                     <div className="mb-12">
-                        <h2 className="text-2xl font-bold mb-6 text-white">Key Insights</h2>
+                        <h2 className="text-2xl font-bold mb-6 text-text">Key Insights</h2>
                         <div className="space-y-4">
                             {[
                                 { title: "Cognitive overload", desc: "Too many options at once overwhelmed users." },
@@ -59,7 +57,7 @@ const CaseStudy1 = () => {
                                 <div key={i} className="flex items-start p-4 bg-secondary/30 rounded-lg">
                                     <span className="text-accent font-bold mr-3">{i + 1}.</span>
                                     <div>
-                                        <span className="font-bold text-white">{insight.title}</span>
+                                        <span className="font-bold text-text">{insight.title}</span>
                                         <span className="text-muted"> — {insight.desc}</span>
                                     </div>
                                 </div>
@@ -69,15 +67,15 @@ const CaseStudy1 = () => {
 
                     <div className="grid md:grid-cols-2 gap-8 mb-12">
                         <div>
-                            <h2 className="text-2xl font-bold mb-4 text-white">Personas (Summary)</h2>
+                            <h2 className="text-2xl font-bold mb-4 text-text">Personas (Summary)</h2>
                             <ul className="space-y-3 text-muted">
-                                <li><strong className="text-white">Rita (67):</strong> hypertensive, moderate tech confidence, wants clarity</li>
-                                <li><strong className="text-white">Suresh (72):</strong> low literacy, avoids apps with too many features</li>
-                                <li><strong className="text-white">Asha (61):</strong> primary caregiver, needs quick access to logs</li>
+                                <li><strong className="text-text">Rita (67):</strong> hypertensive, moderate tech confidence, wants clarity.</li>
+                                <li><strong className="text-text">Suresh (72):</strong> low literacy, avoids apps with too many features</li>
+                                <li><strong className="text-text">Asha (61):</strong> primary caregiver, needs quick access to logs</li>
                             </ul>
                         </div>
                         <div>
-                            <h2 className="text-2xl font-bold mb-4 text-white">Usability Testing Findings</h2>
+                            <h2 className="text-2xl font-bold mb-4 text-text">Usability Testing Findings</h2>
                             <ul className="space-y-3 text-muted">
                                 <li className="flex items-center"><span className="text-red-400 mr-2">⚠️</span> 60% failed to locate the daily health log</li>
                                 <li className="flex items-center"><span className="text-red-400 mr-2">⚠️</span> 3/5 users hesitated to confirm data submission</li>
@@ -88,7 +86,7 @@ const CaseStudy1 = () => {
                     </div>
 
                     <div className="mb-12">
-                        <h2 className="text-2xl font-bold mb-6 text-white">Recommendations</h2>
+                        <h2 className="text-2xl font-bold mb-6 text-text">Recommendations</h2>
                         <div className="grid md:grid-cols-2 gap-4">
                             {[
                                 "Simplify and group critical tasks",
@@ -100,7 +98,7 @@ const CaseStudy1 = () => {
                             ].map((rec, i) => (
                                 <div key={i} className="flex items-center p-3 bg-green-500/10 border border-green-500/20 rounded-lg">
                                     <span className="text-green-400 mr-3">✓</span>
-                                    <span className="text-gray-200">{rec}</span>
+                                    <span className="text-text">{rec}</span>
                                 </div>
                             ))}
                         </div>
@@ -108,7 +106,7 @@ const CaseStudy1 = () => {
 
                     <div className="glass p-8 rounded-2xl text-center">
                         <h2 className="text-2xl font-bold mb-4 text-accent">Outcome</h2>
-                        <p className="text-xl text-white">
+                        <p className="text-xl text-text">
                             A redesigned flow that reduced task completion time by <span className="font-bold text-accent">40%</span> and improved confidence scores across all users.
                         </p>
                     </div>

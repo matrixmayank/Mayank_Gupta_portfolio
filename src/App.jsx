@@ -13,7 +13,7 @@ import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
-    <Router basename="/Mayank_Gupta_portfolio">
+    <Router basename="/">
       <ScrollToTop />
       <div className="min-h-screen bg-primary text-text font-sans selection:bg-accent selection:text-primary flex flex-col">
         <Navbar />
