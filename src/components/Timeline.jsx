@@ -15,7 +15,7 @@ const Timeline = ({ items }) => {
                 >
                     <span className="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-accent ring-4 ring-primary"></span>
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                        <h3 className="text-xl font-bold text-white">{item.role}</h3>
+                        <h3 className="text-xl font-bold text-text-primary">{item.role}</h3>
                         <span className="text-sm font-medium text-accent bg-accent/10 px-3 py-1 rounded-full w-fit mt-2 sm:mt-0">
                             {item.period}
                         </span>

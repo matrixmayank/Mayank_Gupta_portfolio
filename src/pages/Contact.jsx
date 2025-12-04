@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Copy, Check, Phone } from 'lucide-react';
-import { useState } from 'react';
+import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -50,14 +49,14 @@ const Contact = () => {
                     >
                         <div className="glass p-8 rounded-3xl h-full flex flex-col justify-between">
                             <div>
-                                <h2 className="text-2xl font-display font-bold mb-8 text-white">Contact Information</h2>
+                                <h2 className="text-2xl font-display font-bold mb-8 text-text-primary">Contact Information</h2>
                                 <div className="space-y-8">
                                     <div className="flex items-start">
                                         <div className="p-3 bg-accent/10 rounded-xl text-accent mr-4">
                                             <Mail size={24} />
                                         </div>
                                         <div>
-                                            <h3 className="text-lg font-bold text-white mb-1">Email</h3>
+                                            <h3 className="text-lg font-bold text-text-primary mb-1">Email</h3>
                                             <a href="mailto:mayankgupta.letters@gmail.com" className="text-text-secondary hover:text-accent transition-colors">
                                                 mayankgupta.letters@gmail.com
                                             </a>
@@ -68,7 +67,7 @@ const Contact = () => {
                                             <Phone size={24} />
                                         </div>
                                         <div>
-                                            <h3 className="text-lg font-bold text-white mb-1">Phone</h3>
+                                            <h3 className="text-lg font-bold text-text-primary mb-1">Phone</h3>
                                             <a href="tel:+919425115769" className="text-text-secondary hover:text-accent transition-colors">
                                                 +91 94251 15769
                                             </a>
@@ -79,7 +78,7 @@ const Contact = () => {
                                             <MapPin size={24} />
                                         </div>
                                         <div>
-                                            <h3 className="text-lg font-bold text-white mb-1">Location</h3>
+                                            <h3 className="text-lg font-bold text-text-primary mb-1">Location</h3>
                                             <p className="text-text-secondary">
                                                 Available for remote work worldwide.
                                                 <br />Based in India.
@@ -149,8 +148,8 @@ const Contact = () => {
                                 type="submit"
                                 disabled={status === 'submitting' || status === 'success'}
                                 className={`w-full py-4 px-6 rounded-xl font-bold text-white transition-all flex items-center justify-center ${status === 'success'
-                                        ? 'bg-success hover:bg-success'
-                                        : 'bg-accent hover:bg-accent-dark'
+                                    ? 'bg-success hover:bg-success'
+                                    : 'bg-accent hover:bg-accent-dark'
                                     }`}
                             >
                                 {status === 'submitting' ? (

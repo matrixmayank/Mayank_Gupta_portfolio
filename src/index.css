@@ -4,12 +4,50 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  color-scheme: dark;
+@layer base {
+  :root {
+    /* Light Mode */
+    --color-primary: 255 255 255;
+    /* White */
+    --color-secondary: 248 250 252;
+    /* Slate 50 */
+    --color-tertiary: 226 232 240;
+    /* Slate 200 */
+
+    --color-text-primary: 15 23 42;
+    /* Slate 900 */
+    --color-text-secondary: 51 65 85;
+    /* Slate 700 */
+    --color-text-muted: 100 116 139;
+    /* Slate 500 */
+
+    --color-glass-border: 226 232 240;
+    --color-glass-surface: 255 255 255;
+  }
+
+  .dark {
+    /* Dark Mode */
+    --color-primary: 3 7 18;
+    /* Rich Dark */
+    --color-secondary: 15 23 42;
+    /* Slate 900 */
+    --color-tertiary: 30 41 59;
+    /* Slate 800 */
+
+    --color-text-primary: 248 250 252;
+    /* Slate 50 */
+    --color-text-secondary: 203 213 225;
+    /* Slate 300 */
+    --color-text-muted: 148 163 184;
+    /* Slate 400 */
+
+    --color-glass-border: 255 255 255;
+    --color-glass-surface: 15 23 42;
+  }
 }
 
 body {
-  @apply bg-primary text-text-primary font-sans antialiased overflow-x-hidden;
+  @apply bg-primary text-text-primary font-sans antialiased overflow-x-hidden transition-colors duration-300;
   background-image:
     radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
     radial-gradient(circle at 0% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),

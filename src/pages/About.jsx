@@ -51,10 +51,10 @@ const About = () => {
                     <div className="glass p-8 md:p-12 rounded-3xl text-left relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                         <p className="text-xl text-text-secondary mb-8 leading-relaxed relative z-10">
-                            I’m a UX Researcher with a foundation in <span className="text-white font-bold">regulated medical content</span>, <span className="text-white font-bold">product workflows</span>, and <span className="text-white font-bold">software engineering</span>.
+                            I’m a UX Researcher with a foundation in <span className="text-text-primary font-bold">regulated medical content</span>, <span className="text-text-primary font-bold">product workflows</span>, and <span className="text-text-primary font-bold">software engineering</span>.
                         </p>
                         <p className="text-lg text-text-muted leading-relaxed mb-10 relative z-10">
-                            Experienced in generative and evaluative research, usability testing, information comprehension, and insight synthesis. I've worked with global brands such as <span className="text-white">ExxonMobil</span>, <span className="text-white">Caterpillar</span>, <span className="text-white">Toyota</span>, and <span className="text-white">Kenvue</span>, helping teams make informed, user-centered decisions.
+                            Experienced in generative and evaluative research, usability testing, information comprehension, and insight synthesis. I've worked with global brands such as <span className="text-text-primary">ExxonMobil</span>, <span className="text-text-primary">Caterpillar</span>, <span className="text-text-primary">Toyota</span>, and <span className="text-text-primary">Kenvue</span>, helping teams make informed, user-centered decisions.
                         </p>
                         <div className="flex flex-wrap gap-4 relative z-10">
                             <a
@@ -67,7 +67,7 @@ const About = () => {
                             </a>
                             <a
                                 href="tel:+919425115769"
-                                className="inline-flex items-center px-6 py-3 glass text-white font-bold rounded-lg hover:bg-white/10 transition-colors"
+                                className="inline-flex items-center px-6 py-3 glass text-text-primary font-bold rounded-lg hover:bg-white/10 transition-colors"
                             >
                                 <Phone size={20} className="mr-2" /> +91 94251 15769
                             </a>

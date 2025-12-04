@@ -8,9 +8,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#030712", // Richer dark background
-        secondary: "#0f172a", // Deep slate
-        tertiary: "#1e293b",
+        primary: "rgb(var(--color-primary) / <alpha-value>)",
+        secondary: "rgb(var(--color-secondary) / <alpha-value>)",
+        tertiary: "rgb(var(--color-tertiary) / <alpha-value>)",
         accent: {
           DEFAULT: "#3b82f6",
           glow: "#60a5fa",
@@ -19,13 +19,13 @@ export default {
           cyan: "#06b6d4",
         },
         text: {
-          primary: "#f8fafc",
-          secondary: "#cbd5e1",
-          muted: "#94a3b8",
+          primary: "rgb(var(--color-text-primary) / <alpha-value>)",
+          secondary: "rgb(var(--color-text-secondary) / <alpha-value>)",
+          muted: "rgb(var(--color-text-muted) / <alpha-value>)",
         },
         glass: {
-          border: "rgba(255, 255, 255, 0.08)",
-          surface: "rgba(15, 23, 42, 0.6)",
+          border: "rgba(var(--color-glass-border), 0.08)",
+          surface: "rgba(var(--color-glass-surface), 0.6)",
         }
       },
       fontFamily: {

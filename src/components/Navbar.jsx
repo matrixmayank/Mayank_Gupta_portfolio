@@ -29,8 +29,8 @@ const Navbar = () => {
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="text-2xl font-display font-bold tracking-tight group">
-          <span className="text-white group-hover:text-accent transition-colors">Mayank</span>
-          <span className="text-accent group-hover:text-white transition-colors">.Gupta</span>
+          <span className="text-text-primary group-hover:text-accent transition-colors">Mayank</span>
+          <span className="text-accent group-hover:text-text-primary transition-colors">.Gupta</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -39,7 +39,7 @@ const Navbar = () => {
             <Link
               key={link.name}
               to={link.path}
-              className="relative text-sm font-medium text-text-secondary hover:text-white transition-colors"
+              className="relative text-sm font-medium text-text-secondary hover:text-text-primary transition-colors"
             >
               {link.name}
               {location.pathname === link.path && (
@@ -66,7 +66,7 @@ const Navbar = () => {
             <Download size={16} className="mr-2" />
             Resume
           </a>
-          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-white p-2">
+          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-text-primary p-2">
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -87,7 +87,7 @@ const Navbar = () => {
                   key={link.name}
                   to={link.path}
                   onClick={() => setIsOpen(false)}
-                  className={`text-lg font-medium ${location.pathname === link.path ? 'text-accent' : 'text-white'}`}
+                  className={`text-lg font-medium ${location.pathname === link.path ? 'text-accent' : 'text-text-primary'}`}
                 >
                   {link.name}
                 </Link>

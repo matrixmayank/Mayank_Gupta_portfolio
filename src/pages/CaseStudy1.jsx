@@ -60,7 +60,7 @@ const CaseStudy1 = () => {
                     {/* Content Sections */}
                     <div className="space-y-16">
                         <section>
-                            <h2 className="text-3xl font-display font-bold mb-6 text-white">The Challenge</h2>
+                            <h2 className="text-3xl font-display font-bold mb-6 text-text-primary">The Challenge</h2>
                             <div className="glass p-8 rounded-3xl">
                                 <p className="text-text-muted leading-relaxed mb-4">
                                     The client, a health-tech startup, noticed that while their app had high downloads, retention among users over 60 was extremely low.
@@ -73,7 +73,7 @@ const CaseStudy1 = () => {
                         </section>
 
                         <section>
-                            <h2 className="text-3xl font-display font-bold mb-6 text-white">Research Methodology</h2>
+                            <h2 className="text-3xl font-display font-bold mb-6 text-text-primary">Research Methodology</h2>
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div className="glass p-6 rounded-2xl">
                                     <h3 className="text-xl font-bold mb-4 text-accent">1. Contextual Inquiry</h3>
@@ -87,7 +87,7 @@ const CaseStudy1 = () => {
                         </section>
 
                         <section>
-                            <h2 className="text-3xl font-display font-bold mb-6 text-white">Key Findings</h2>
+                            <h2 className="text-3xl font-display font-bold mb-6 text-text-primary">Key Findings</h2>
                             <ul className="space-y-4">
                                 {[
                                     { title: "Contrast & Legibility", desc: "Thin fonts and low contrast grays were unreadable for 70% of participants." },
@@ -98,7 +98,7 @@ const CaseStudy1 = () => {
                                     <li key={i} className="glass p-6 rounded-2xl flex items-start">
                                         <span className="text-accent font-bold text-xl mr-4">{i + 1}.</span>
                                         <div>
-                                            <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                                            <h3 className="text-xl font-bold text-text-primary mb-2">{item.title}</h3>
                                             <p className="text-text-muted">{item.desc}</p>
                                         </div>
                                     </li>
@@ -107,9 +107,9 @@ const CaseStudy1 = () => {
                         </section>
 
                         <section>
-                            <h2 className="text-3xl font-display font-bold mb-6 text-white">Impact & Results</h2>
+                            <h2 className="text-3xl font-display font-bold mb-6 text-text-primary">Impact & Results</h2>
                             <div className="bg-gradient-to-br from-accent/20 to-accent-purple/20 p-8 rounded-3xl border border-accent/20">
-                                <p className="text-lg text-white mb-6">
+                                <p className="text-lg text-text-primary mb-6">
                                     Based on these findings, the design team implemented a "Senior Mode" with larger text, high contrast, and explicit text labels.
                                 </p>
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">

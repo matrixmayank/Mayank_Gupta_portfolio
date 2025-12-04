@@ -60,7 +60,7 @@ const CaseStudy2 = () => {
                     {/* Content Sections */}
                     <div className="space-y-16">
                         <section>
-                            <h2 className="text-3xl font-display font-bold mb-6 text-white">The Challenge</h2>
+                            <h2 className="text-3xl font-display font-bold mb-6 text-text-primary">The Challenge</h2>
                             <div className="glass p-8 rounded-3xl">
                                 <p className="text-text-muted leading-relaxed mb-4">
                                     A social enterprise wanted to launch a digital job board for unskilled migrant workers.
@@ -73,7 +73,7 @@ const CaseStudy2 = () => {
                         </section>
 
                         <section>
-                            <h2 className="text-3xl font-display font-bold mb-6 text-white">Field Research</h2>
+                            <h2 className="text-3xl font-display font-bold mb-6 text-text-primary">Field Research</h2>
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div className="glass p-6 rounded-2xl">
                                     <h3 className="text-xl font-bold mb-4 text-accent-cyan">Intercept Interviews</h3>
@@ -87,7 +87,7 @@ const CaseStudy2 = () => {
                         </section>
 
                         <section>
-                            <h2 className="text-3xl font-display font-bold mb-6 text-white">Key Insights</h2>
+                            <h2 className="text-3xl font-display font-bold mb-6 text-text-primary">Key Insights</h2>
                             <ul className="space-y-4">
                                 {[
                                     { title: "Trust is Physical", desc: "Workers didn't trust a screen. They trusted a 'thekedar' (contractor) they could see and hold accountable." },
@@ -98,7 +98,7 @@ const CaseStudy2 = () => {
                                     <li key={i} className="glass p-6 rounded-2xl flex items-start">
                                         <span className="text-accent-cyan font-bold text-xl mr-4">{i + 1}.</span>
                                         <div>
-                                            <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                                            <h3 className="text-xl font-bold text-text-primary mb-2">{item.title}</h3>
                                             <p className="text-text-muted">{item.desc}</p>
                                         </div>
                                     </li>
@@ -107,9 +107,9 @@ const CaseStudy2 = () => {
                         </section>
 
                         <section>
-                            <h2 className="text-3xl font-display font-bold mb-6 text-white">Strategic Pivot</h2>
+                            <h2 className="text-3xl font-display font-bold mb-6 text-text-primary">Strategic Pivot</h2>
                             <div className="bg-gradient-to-br from-accent-cyan/20 to-blue-500/20 p-8 rounded-3xl border border-accent-cyan/20">
-                                <p className="text-lg text-white mb-6">
+                                <p className="text-lg text-text-primary mb-6">
                                     We recommended pivoting from a "Job Board App" to a "Trusted Agent Model".
                                 </p>
                                 <ul className="list-disc list-inside space-y-3 text-text-secondary mb-8">

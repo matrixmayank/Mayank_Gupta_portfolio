@@ -5,7 +5,7 @@ const SkillBar = ({ name, level, delay }) => {
     return (
         <div className="mb-6">
             <div className="flex justify-between mb-2">
-                <span className="text-base font-medium text-white">{name}</span>
+                <span className="text-base font-medium text-text-primary">{name}</span>
                 <span className="text-sm font-medium text-text-muted">{level}%</span>
             </div>
             <div className="w-full bg-white/5 rounded-full h-2.5 overflow-hidden">
