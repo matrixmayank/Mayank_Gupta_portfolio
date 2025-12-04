@@ -1,49 +1,173 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Copy, Check } from 'lucide-react';
+import { Mail, Copy, Check, Phone } from 'lucide-react';
 import { useState } from 'react';
 
 const Contact = () => {
-    const [copied, setCopied] = useState(false);
-    const email = "mayankgupta.letters@gmail.com";
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+    const [status, setStatus] = useState('idle'); // idle, submitting, success, error
 
-    const handleCopy = () => {
-        navigator.clipboard.writeText(email);
-        setCopied(true);
-        setTimeout(() => setCopied(false), 2000);
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setStatus('submitting');
+
+        // Simulate form submission
+        setTimeout(() => {
+            setStatus('success');
+            setFormData({ name: '', email: '', message: '' });
+        }, 1500);
     };
 
     return (
-        <div className="pt-24 pb-20 min-h-[80vh] flex items-center">
-            <div className="container mx-auto px-4 max-w-3xl text-center">
+        <div className="pt-24 pb-20">
+            <div className="container mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
+                    className="text-center mb-16"
                 >
-                    <h1 className="text-4xl md:text-6xl font-bold mb-8">Let’s Connect</h1>
-                    <p className="text-xl text-muted mb-12">
-                        If you want to talk about research, usability, product decisions, or opportunities — feel free to reach out.
+                    <h1 className="text-4xl md:text-6xl font-display font-bold mb-6">Get in Touch</h1>
+                    <p className="text-xl text-text-secondary max-w-2xl mx-auto">
+                        Have a project in mind or just want to chat about UX? I’d love to hear from you.
                     </p>
-
-                    <div className="inline-flex items-center justify-center p-1 rounded-xl bg-secondary/50 border border-white/10 backdrop-blur-sm">
-                        <div className="flex items-center px-6 py-4">
-                            <Mail className="text-accent mr-4" size={24} />
-                            <span className="text-xl md:text-2xl font-medium text-white">{email}</span>
-                        </div>
-                        <button
-                            onClick={handleCopy}
-                            className="p-4 hover:bg-white/10 rounded-lg transition-colors border-l border-white/10 ml-2"
-                            title="Copy email"
-                        >
-                            {copied ? <Check className="text-green-400" size={24} /> : <Copy className="text-muted hover:text-white" size={24} />}
-                        </button>
-                    </div>
-
-                    <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-                        {/* Placeholder for social links if needed later */}
-                    </div>
                 </motion.div>
+
+                <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                    {/* Contact Info */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                    >
+                        <div className="glass p-8 rounded-3xl h-full flex flex-col justify-between">
+                            <div>
+                                <h2 className="text-2xl font-display font-bold mb-8 text-white">Contact Information</h2>
+                                <div className="space-y-8">
+                                    <div className="flex items-start">
+                                        <div className="p-3 bg-accent/10 rounded-xl text-accent mr-4">
+                                            <Mail size={24} />
+                                        </div>
+                                        <div>
+                                            <h3 className="text-lg font-bold text-white mb-1">Email</h3>
+                                            <a href="mailto:mayankgupta.letters@gmail.com" className="text-text-secondary hover:text-accent transition-colors">
+                                                mayankgupta.letters@gmail.com
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-start">
+                                        <div className="p-3 bg-accent/10 rounded-xl text-accent mr-4">
+                                            <Phone size={24} />
+                                        </div>
+                                        <div>
+                                            <h3 className="text-lg font-bold text-white mb-1">Phone</h3>
+                                            <a href="tel:+919425115769" className="text-text-secondary hover:text-accent transition-colors">
+                                                +91 94251 15769
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-start">
+                                        <div className="p-3 bg-accent/10 rounded-xl text-accent mr-4">
+                                            <MapPin size={24} />
+                                        </div>
+                                        <div>
+                                            <h3 className="text-lg font-bold text-white mb-1">Location</h3>
+                                            <p className="text-text-secondary">
+                                                Available for remote work worldwide.
+                                                <br />Based in India.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="mt-12 p-6 bg-secondary/50 rounded-2xl border border-white/5">
+                                <p className="text-text-muted italic">
+                                    "Design is not just what it looks like and feels like. Design is how it works."
+                                </p>
+                                <p className="text-accent font-bold mt-2">— Steve Jobs</p>
+                            </div>
+                        </div>
+                    </motion.div>
+
+                    {/* Contact Form */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.4 }}
+                    >
+                        <form onSubmit={handleSubmit} className="glass p-8 rounded-3xl space-y-6">
+                            <div>
+                                <label htmlFor="name" className="block text-sm font-medium text-text-secondary mb-2">Name</label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    value={formData.name}
+                                    onChange={handleChange}
+                                    required
+                                    className="w-full px-4 py-3 bg-secondary/50 border border-glass-border rounded-xl text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
+                                    placeholder="Your Name"
+                                />
+                            </div>
+                            <div>
+                                <label htmlFor="email" className="block text-sm font-medium text-text-secondary mb-2">Email</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    required
+                                    className="w-full px-4 py-3 bg-secondary/50 border border-glass-border rounded-xl text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
+                                    placeholder="your@email.com"
+                                />
+                            </div>
+                            <div>
+                                <label htmlFor="message" className="block text-sm font-medium text-text-secondary mb-2">Message</label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    required
+                                    rows="5"
+                                    className="w-full px-4 py-3 bg-secondary/50 border border-glass-border rounded-xl text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all resize-none"
+                                    placeholder="Tell me about your project..."
+                                ></textarea>
+                            </div>
+
+                            <button
+                                type="submit"
+                                disabled={status === 'submitting' || status === 'success'}
+                                className={`w-full py-4 px-6 rounded-xl font-bold text-white transition-all flex items-center justify-center ${status === 'success'
+                                        ? 'bg-success hover:bg-success'
+                                        : 'bg-accent hover:bg-accent-dark'
+                                    }`}
+                            >
+                                {status === 'submitting' ? (
+                                    <span className="animate-pulse">Sending...</span>
+                                ) : status === 'success' ? (
+                                    <>
+                                        <CheckCircle size={20} className="mr-2" /> Message Sent!
+                                    </>
+                                ) : (
+                                    <>
+                                        Send Message <Send size={20} className="ml-2" />
+                                    </>
+                                )}
+                            </button>
+                        </form>
+                    </motion.div>
+                </div>
             </div>
         </div>
     );
