@@ -113,7 +113,7 @@ const Contact = () => {
                                     value={formData.name}
                                     onChange={handleChange}
                                     required
-                                    className="w-full px-4 py-3 bg-secondary/50 border border-glass-border rounded-xl text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
+                                    className="w-full px-4 py-3 bg-secondary/50 border border-glass-border rounded-xl text-text-primary focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
                                     placeholder="Your Name"
                                 />
                             </div>
@@ -126,7 +126,7 @@ const Contact = () => {
                                     value={formData.email}
                                     onChange={handleChange}
                                     required
-                                    className="w-full px-4 py-3 bg-secondary/50 border border-glass-border rounded-xl text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
+                                    className="w-full px-4 py-3 bg-secondary/50 border border-glass-border rounded-xl text-text-primary focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
                                     placeholder="your@email.com"
                                 />
                             </div>
@@ -139,7 +139,7 @@ const Contact = () => {
                                     onChange={handleChange}
                                     required
                                     rows="5"
-                                    className="w-full px-4 py-3 bg-secondary/50 border border-glass-border rounded-xl text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all resize-none"
+                                    className="w-full px-4 py-3 bg-secondary/50 border border-glass-border rounded-xl text-text-primary focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all resize-none"
                                     placeholder="Tell me about your project..."
                                 ></textarea>
                             </div>
