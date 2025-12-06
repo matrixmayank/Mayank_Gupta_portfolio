@@ -19,17 +19,20 @@ const Contact = () => {
         setStatus('submitting');
 
         const GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSe8evll-Ch7t-Y9b9rTLRNwdeoLCK_QPL1IsBqe8mEevVTSeA/formResponse";
-        const formDataToSend = new FormData();
 
-        // Mapping based on the provided pre-filled link
-        formDataToSend.append('entry.1582747356', formData.name);    // Name
-        formDataToSend.append('entry.139470427', formData.email);    // Email
-        formDataToSend.append('entry.1684407468', formData.message); // Message
+        // Use URLSearchParams for proper encoding
+        const params = new URLSearchParams();
+        params.append('entry.1582747356', formData.name);    // Name
+        params.append('entry.139470427', formData.email);    // Email
+        params.append('entry.1684407468', formData.message); // Message
 
         try {
             await fetch(GOOGLE_FORM_ACTION_URL, {
                 method: 'POST',
-                body: formDataToSend,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: params.toString(),
                 mode: 'no-cors', // Important to avoid CORS errors
             });
 
