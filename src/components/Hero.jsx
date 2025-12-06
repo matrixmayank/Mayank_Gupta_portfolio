@@ -2,7 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Download } from 'lucide-react';
 
-import avatarImage from '../assets/avatar.png';
+import avatarDark from '../assets/avatar-dark.png';
+import avatarLight from '../assets/avatar-light.png';
 
 const Hero = () => {
     return (
@@ -24,10 +25,21 @@ const Hero = () => {
                         className="mb-8 relative"
                     >
                         <div className="absolute inset-0 bg-accent/20 blur-3xl rounded-full transform scale-110 opacity-50"></div>
+
+                        {/* Dark Mode Avatar (Black BG + Screen Blend) */}
                         <motion.img
-                            src={avatarImage}
+                            src={avatarDark}
                             alt="3D Avatar"
-                            className="w-48 h-48 md:w-64 md:h-64 object-contain relative z-10 drop-shadow-2xl mix-blend-screen"
+                            className="hidden dark:block w-48 h-48 md:w-64 md:h-64 object-contain relative z-10 drop-shadow-2xl mix-blend-screen"
+                            animate={{ y: [0, -10, 0] }}
+                            transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+                        />
+
+                        {/* Light Mode Avatar (White BG + Multiply Blend) */}
+                        <motion.img
+                            src={avatarLight}
+                            alt="3D Avatar"
+                            className="block dark:hidden w-48 h-48 md:w-64 md:h-64 object-contain relative z-10 drop-shadow-2xl mix-blend-multiply"
                             animate={{ y: [0, -10, 0] }}
                             transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
                         />
