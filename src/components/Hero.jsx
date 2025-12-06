@@ -23,16 +23,14 @@ const Hero = () => {
                         transition={{ duration: 0.5 }}
                         className="mb-8 relative"
                     >
-                        <div className="absolute inset-0 bg-accent/20 blur-3xl rounded-full transform scale-110"></div>
-                        <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full p-1 bg-gradient-to-br from-white/20 to-white/0 backdrop-blur-sm ring-1 ring-white/20 shadow-2xl overflow-hidden">
-                            <motion.img
-                                src={avatarImage}
-                                alt="3D Avatar"
-                                className="w-full h-full object-cover rounded-full"
-                                animate={{ scale: [1, 1.05, 1] }}
-                                transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-                            />
-                        </div>
+                        <div className="absolute inset-0 bg-accent/20 blur-3xl rounded-full transform scale-110 opacity-50"></div>
+                        <motion.img
+                            src={avatarImage}
+                            alt="3D Avatar"
+                            className="w-48 h-48 md:w-64 md:h-64 object-contain relative z-10 drop-shadow-2xl mix-blend-screen"
+                            animate={{ y: [0, -10, 0] }}
+                            transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+                        />
                     </motion.div>
 
                     <motion.div
