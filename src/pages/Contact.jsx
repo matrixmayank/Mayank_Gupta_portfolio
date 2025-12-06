@@ -14,15 +14,35 @@ const Contact = () => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus('submitting');
 
-        // Simulate form submission
-        setTimeout(() => {
+        const GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSe8evll-Ch7t-Y9b9rTLRNwdeoLCK_QPL1IsBqe8mEevVTSeA/formResponse";
+        const formDataToSend = new FormData();
+
+        // Mapping based on the provided pre-filled link
+        formDataToSend.append('entry.1582747356', formData.name);    // Name
+        formDataToSend.append('entry.139470427', formData.email);    // Email
+        formDataToSend.append('entry.1684407468', formData.message); // Message
+
+        try {
+            await fetch(GOOGLE_FORM_ACTION_URL, {
+                method: 'POST',
+                body: formDataToSend,
+                mode: 'no-cors', // Important to avoid CORS errors
+            });
+
             setStatus('success');
             setFormData({ name: '', email: '', message: '' });
-        }, 1500);
+
+            // Reset status after 5 seconds
+            setTimeout(() => setStatus('idle'), 5000);
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            setStatus('error');
+            setTimeout(() => setStatus('idle'), 3000);
+        }
     };
 
     return (
