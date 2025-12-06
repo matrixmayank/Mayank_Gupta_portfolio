@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Download } from 'lucide-react';
 
+import avatarImage from '../assets/avatar.png';
+
 const Hero = () => {
     return (
         <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
@@ -14,10 +16,29 @@ const Hero = () => {
 
             <div className="container mx-auto px-6 relative z-10">
                 <div className="flex flex-col items-center text-center">
+                    {/* 3D Avatar */}
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.5 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.5 }}
+                        className="mb-8 relative"
+                    >
+                        <div className="absolute inset-0 bg-accent/20 blur-3xl rounded-full transform scale-110"></div>
+                        <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full p-1 bg-gradient-to-br from-white/20 to-white/0 backdrop-blur-sm ring-1 ring-white/20 shadow-2xl overflow-hidden">
+                            <motion.img
+                                src={avatarImage}
+                                alt="3D Avatar"
+                                className="w-full h-full object-cover rounded-full"
+                                animate={{ scale: [1, 1.05, 1] }}
+                                transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+                            />
+                        </div>
+                    </motion.div>
+
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
                         className="mb-6"
                     >
                         <span className="inline-block py-1 px-3 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-medium mb-6">
